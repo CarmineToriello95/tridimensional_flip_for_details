@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tridimensional_flip_for_details/screens.dart/utils.dart';
 
-class Item extends StatefulWidget {
+class Product extends StatefulWidget {
   @override
-  _ItemState createState() => _ItemState();
+  _ProductState createState() => _ProductState();
 }
 
-class _ItemState extends State<Item> {
+class _ProductState extends State<Product> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

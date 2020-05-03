@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'utils.dart';
 
-class ItemName extends StatefulWidget {
+class ProductName extends StatefulWidget {
   @override
-  _ItemNameState createState() => _ItemNameState();
+  _ProductNameState createState() => _ProductNameState();
 }
 
-class _ItemNameState extends State<ItemName> {
+class _ProductNameState extends State<ProductName> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class _ItemNameState extends State<ItemName> {
                     ),
                     Spacer(),
                     Opacity(
-                      opacity: 1 - AnimationsHandler.screensController.value,
+                      opacity: 1 - AnimationsHandler.animationController.value,
                       child: GestureDetector(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,

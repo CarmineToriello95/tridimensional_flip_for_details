@@ -23,7 +23,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
         leading: IconButton(
           icon: AnimatedIcon(
             icon: AnimatedIcons.menu_close,
-            progress: AnimationsHandler.screensController,
+            progress: AnimationsHandler.animationController,
             color: Colors.black87,
           ),
           onPressed: () => AnimationsHandler.hideProductDescription(),
@@ -64,7 +64,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                           ],
                         ),
                         onTap: () =>
-                            AnimationsHandler.screensController.forward(),
+                            AnimationsHandler.animationController.forward(),
                       ),
                     )
                   ],

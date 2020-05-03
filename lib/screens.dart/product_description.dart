@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tridimensional_flip_for_details/screens.dart/utils.dart';
 
-class ItemDescription extends StatefulWidget {
+class ProductDescription extends StatefulWidget {
   @override
-  _ItemDescriptionState createState() => _ItemDescriptionState();
+  _ProductDescriptionState createState() => _ProductDescriptionState();
 }
 
-class _ItemDescriptionState extends State<ItemDescription>
+class _ProductDescriptionState extends State<ProductDescription>
     with TickerProviderStateMixin {
   Animation<Color> _colorAnimation;
 
@@ -14,7 +14,7 @@ class _ItemDescriptionState extends State<ItemDescription>
   void initState() {
     super.initState();
     _colorAnimation = ColorTween(begin: kPrimaryColor, end: kSecondaryColor)
-        .animate(AnimationsHandler.screensController);
+        .animate(AnimationsHandler.animationController);
   }
 
   @override
