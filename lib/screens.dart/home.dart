@@ -59,7 +59,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               Transform.translate(
                 offset: Offset(
                   0,
-                  -(kMaxSlide - Utils.screenHeight * 0.20) * alpha.value,
+                  -(kMaxSlide - Utils.screenHeight * 0.22) * alpha.value,
                 ),
                 child: ProductName(),
               ),
