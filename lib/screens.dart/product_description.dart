@@ -32,15 +32,37 @@ class _ProductDescriptionState extends State<ProductDescription>
                     SizedBox(
                       height: Utils.screenHeight * 0.20,
                     ),
-                    Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' +
-                          'Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur.',
+                    SlideTransition(
+                      position: Tween<Offset>(
+                        begin: Offset(0, 1),
+                        end: Offset(0, 0),
+                      ).animate(
+                        CurvedAnimation(
+                          curve: Interval(0.5, 0.7),
+                          parent: AnimationsHandler.animationController,
+                        ),
+                      ),
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' +
+                            'Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur.',
+                      ),
                     ),
                     SizedBox(
                       height: 24.0,
                     ),
-                    Image.asset(
-                      'assets/images/thumbnail.jpg',
+                    SlideTransition(
+                      position: Tween<Offset>(
+                        begin: Offset(0, 1),
+                        end: Offset(0, 0),
+                      ).animate(
+                        CurvedAnimation(
+                          curve: Interval(0.8, 1.0),
+                          parent: AnimationsHandler.animationController,
+                        ),
+                      ),
+                      child: Image.asset(
+                        'assets/images/thumbnail.jpg',
+                      ),
                     ),
                   ],
                 ),

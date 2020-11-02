@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class _HomeState extends State<Home> with TickerProviderStateMixin {
   Animation<double> alpha;
   bool _isDraggable;
 
@@ -19,9 +19,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     AnimationsHandler.animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 800));
+        AnimationController(duration: Duration(milliseconds: 800), vsync: this);
     final Animation curve = CurvedAnimation(
-        parent: AnimationsHandler.animationController, curve: Curves.easeIn);
+        parent: AnimationsHandler.animationController, curve: Curves.easeOut);
     alpha = Tween<double>(begin: 0, end: 1).animate(curve);
   }
 

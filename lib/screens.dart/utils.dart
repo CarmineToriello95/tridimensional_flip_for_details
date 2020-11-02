@@ -7,7 +7,8 @@ const double kDragFromBottomEdge = 500;
 const double kDragFromTopEdge = 200;
 
 class Utils {
-  static double screenHeight = 0;
+
+  static double screenHeight;
 }
 
 class AnimationsHandler {
